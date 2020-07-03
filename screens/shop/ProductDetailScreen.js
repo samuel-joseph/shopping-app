@@ -1,11 +1,11 @@
 import React from "react";
 import {
+  ScrollView,
   View,
   Text,
   Image,
-  StyleSheet,
   Button,
-  ScrollView,
+  StyleSheet,
 } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -17,7 +17,6 @@ const ProductDetailScreen = (props) => {
   const selectedProduct = useSelector((state) =>
     state.products.availableProducts.find((prod) => prod.id === productId)
   );
-
   const dispatch = useDispatch();
 
   return (
@@ -61,10 +60,10 @@ const styles = StyleSheet.create({
     fontFamily: "open-sans-bold",
   },
   description: {
+    fontFamily: "open-sans",
     fontSize: 14,
     textAlign: "center",
     marginHorizontal: 20,
-    fontFamily: "open-sans",
   },
 });
 
