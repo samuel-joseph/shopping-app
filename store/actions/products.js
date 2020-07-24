@@ -7,14 +7,17 @@ export const deleteProduct = (productId) => {
 };
 
 export const createProduct = (title, description, imageUrl, price) => {
-  return {
-    type: CREATE_PRODUCT,
-    productData: {
-      title,
-      description: description,
-      imageUrl,
-      price,
-    },
+  return (dispatch) => {
+    //any async code you want!
+    dispatch({
+      type: CREATE_PRODUCT,
+      productData: {
+        title,
+        description: description,
+        imageUrl,
+        price,
+      },
+    });
   };
 };
 
